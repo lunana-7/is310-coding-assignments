@@ -1,3 +1,3 @@
 # AI Workflow
 
-This document describes the AI workflow for the assignments.
+I plan to use AI tools this semester to assist me in writing code.

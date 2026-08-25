@@ -10,10 +10,9 @@
 
 ![Git Installation](images/git-installation.png)
 
-3. VS Code
+3. Antigravity
 
-![VS Code Installation](images/vscode-installation.png)
+![Antigravity Installation](images/antigravity-installation.png)
 
 4. AI Tool/Workflow
-
-I plan to use an AI tool this semester. For more details on how I will use it, please see my [AI Workflow](ai-workflow.md).
+I plan to use Antigravity this semester. For more details on how I will use it, please see my [AI Workflow](ai-workflow.md).

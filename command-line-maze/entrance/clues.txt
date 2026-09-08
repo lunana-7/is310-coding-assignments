@@ -1,0 +1,11 @@
+Welcome to Min's Cultural Music Maze!
+
+To select the correct door, analyze the lyrics in violent-crime.txt (by Kanye West).
+Compare the frequency of the words "daughters" and "karma" in the lyrics:
+
+- If "daughters" appears more frequently than "karma", go through door_1.
+- If "karma" appears more frequently than "daughters", go through door_2.
+
+Tip: You can count occurrences using the command line:
+    grep -i -c "daughters" violent-crime.txt
+    grep -i -c "karma" violent-crime.txt

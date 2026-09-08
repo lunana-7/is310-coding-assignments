@@ -1,0 +1,14 @@
+Welcome to the Secret Backstage Vault!
+
+You successfully uncovered the hidden level using `ls -a`.
+
+Here, you see 5 final doors: final_door_1 through final_door_5.
+Only ONE door holds the master record and the Center of the Maze!
+The other doors are dead ends or empty studio takes (0 words).
+
+Inspect the message.txt file inside the doors:
+    cat final_door_1/message.txt
+    cat final_door_2/message.txt
+    ...
+
+Find the door with the victory message to complete the maze!

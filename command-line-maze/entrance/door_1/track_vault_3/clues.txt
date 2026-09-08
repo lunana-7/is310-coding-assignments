@@ -1,0 +1,16 @@
+You've reached the Master Production Studio!
+
+Inside this room is mystery_track.txt, an iconic cultural anthem of resilience.
+You can read it using `cat mystery_track.txt` or `head -n 15 mystery_track.txt`.
+
+Notice that the jazz_lounge folder leads to a silent room (silent_room.txt has 0 words—dead end!).
+
+The real path to the Center of the Maze isn't visible with a standard `ls` command!
+In Unix and command-line systems, hidden files and directories start with a dot (.).
+
+To reveal hidden files and directories, run:
+    ls -a
+
+You should see a hidden directory starting with a dot (e.g., .secret_vault).
+Step inside using:
+    cd .secret_vault

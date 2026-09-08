@@ -1,0 +1,17 @@
+═══════════════════════════════════════════════════════════════════
+🎉 CONGRATULATIONS! 🥳
+═══════════════════════════════════════════════════════════════════
+
+You have successfully reached the Center of Min's Cultural Music Maze!
+
+Throughout this maze, you applied command line skills to cultural music data:
+- Analyzed lyrical frequency using `grep` and word counts (`wc`)
+- Navigated directory hierarchies with `cd` and `ls`
+- Filtered out empty file traps (0 words)
+- Uncovered hidden dot-directories using `ls -a`
+- Explored seminal hip-hop texts (Kanye West, 2Pac, Kendrick Lamar)
+
+📸 NEXT STEP FOR HOMEWORK SUBMISSION:
+Take a screenshot of this message in your terminal as proof of completion,
+and post it to the class GitHub Discussion thread!
+═══════════════════════════════════════════════════════════════════

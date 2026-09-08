@@ -1,0 +1,8 @@
+Dead end! You entered Studio B (door_2).
+
+Notice that dead_end.txt is an empty file (word count is 0).
+Remember the rule: If you find an empty file or your word count equals zero, that's a dead end and you'll need to turn around.
+
+Turn back with:
+    cd ..
+and enter door_1!

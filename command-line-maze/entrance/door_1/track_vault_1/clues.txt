@@ -1,0 +1,8 @@
+Dead end! You reached an empty recording booth.
+
+Notice that empty_studio.txt has 0 words.
+Remember the rule: If you find an empty file or your word count equals zero, that's a dead end and you'll need to turn around.
+
+Turn back with:
+    cd ..
+and enter track_vault_3!

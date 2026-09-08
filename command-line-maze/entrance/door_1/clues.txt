@@ -1,0 +1,11 @@
+You made it through Door 1 into Studio A!
+
+Here you find the legendary track track_changes.txt (by 2Pac).
+Examine this culturally significant track using the word count command:
+
+    wc -w track_changes.txt
+
+- If track_changes.txt contains MORE than 500 words, enter track_vault_3.
+- If it contains 500 words or FEWER, enter track_vault_1.
+
+Note: door_empty_1 and door_empty_2 are empty booth doors (word count is 0)—dead ends!

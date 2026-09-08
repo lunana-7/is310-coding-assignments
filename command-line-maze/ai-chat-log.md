@@ -10,8 +10,7 @@
 
 ## 1. Initial Prompt & Objectives
 **User Prompt:**
-> "혹시에 여기에 빠진게 있는지 확인하고 만들어 줄 수 있을까 그리고 내가 read.md에 이거 어떻게 play하는지 적었거든 그거에 맞춰서 text랑 기존에 있던 moby-dick.txt 같은 것들을 다 지우거나 변경해주면 좋을 것 같아"  
-> *(Could you check if anything is missing here and create it? Also, I wrote how to play this in readme.md, so based on that, could you delete or replace existing texts like moby-dick.txt?)*
+> (Could you check if anything is missing here and create it? Also, I wrote how to play this in readme.md, so based on that, could you delete or replace existing texts like moby-dick.txt?)
 
 **Goals Identified:**
 1. Perform a thorough audit against the homework assignment rubric and requirements.

@@ -2,57 +2,115 @@
 
 **Assignment:** Lost & Found in the Cultural Command Line (IS 310)  
 **Student:** Min Kim  
+**GitHub Username:** @lunana-7  
 **Group:** A2 (Music & Cultural Data)  
-**Tool Used:** Google Antigravity  
-**Date:** September 6–7, 2026  
+**Tool Used:** Google Antigravity (Gemini 3.7 Flash)  
+**Dates of Interaction:** September 6–10, 2026  
 
 ---
 
-## 1. Initial Prompt & Objectives
-**User Prompt:**
-> (Could you check if anything is missing here and create it? Also, I wrote how to play this in readme.md, so based on that, could you delete or replace existing texts like moby-dick.txt?)
-
-**Goals Identified:**
-1. Perform a thorough audit against the homework assignment rubric and requirements.
-2. Remove old sample Project Gutenberg literature texts (`moby-dick.txt`, `alice-in-wonderland.txt`, `mystery_book.txt`, etc.).
-3. Restructure the maze around the student's Group A2 topic: **Music / Hip-Hop Cultural Data**, integrating the user's existing `violent-crime.txt`.
-4. Ensure gameplay matches the rules set out in `README.md` (CLI navigation only, using `wc` to count words and `grep` for clues, with empty 0-word files representing dead ends).
-5. Add missing cross-platform requirements (`hide-dotfiles.ps1`), document AI usage (`ai-chat-log.md`), and prepare the unzipped structure and `maze.zip`.
+## Overview of AI Collaboration
+This log documents the iterative prompts, AI responses, and technical decision-making during the development and refinement of the Cultural Command Line Maze. Google Antigravity was used as a pair programming assistant to audit assignment requirements, structure hip-hop cultural data, craft command-line puzzle logic, solve cross-platform issues, and maintain clean Git repository hygiene.
 
 ---
 
-## 2. Audit Findings & Gap Analysis
-During initial investigation, the following issues were diagnosed:
-- **Folder Name Syntax:** The directory in the repository was named `" command-line-maze"` with an accidental leading space. This was fixed via `git mv` so peers can run `cd command-line-maze` without path issues.
-- **Out-of-Theme Files:** Leftover files from the instructor's sample Gutenberg maze were still present (`moby-dick.txt`, `alice-in-wonderland.txt`, Dracula, Frankenstein files).
-- **Missing Required Script:** The Windows helper script `hide-dotfiles.ps1` required by the assignment specification was not yet created.
-- **Empty Files:** `ai-chat-log.md` existed but was 0 bytes.
-- **README Formatting:** Lacked formal title and author header, command-line cheat sheet, and step-by-step unzip instructions for peers.
-- **Packaging:** The required `maze.zip` archive containing the maze structure (excluding `README.md`) was missing.
+## 1. Initial Prompt: Audit & Theme Replacement
+
+### User Prompt
+> "혹시에 여기에 빠진게 있는지 확인하고 만들어 줄 수 있을까 그리고 내가 read.md에 이거 어떻게 play하는지 적었거든 그거에 맞춰서 text랑 기존에 있던 moby-dick.txt 같은 것들을 다 지우거나 변경해주면 좋을 것 같아"  
+> *(English translation: "Could you check if anything is missing here and create it? Also, I wrote how to play this in readme.md, so based on that, could you delete or replace existing texts like moby-dick.txt?")*  
+> [Attached assignment specification: IS 310 Cultural Command Line Maze rubric, minimum 5 directories, 5 files, hidden file/dir, cultural framing, ai-chat-log.md, maze.zip, and cross-platform compatibility.]
+
+### AI Response & Summary of Action
+1. **Rubric Audit & Gap Identification:**
+   - Diagnosed an accidental leading space in the folder name (`" command-line-maze"`), standardizing it to `command-line-maze`.
+   - Identified leftover Project Gutenberg text files (`moby-dick.txt`, `alice-in-wonderland.txt`, Dracula, Frankenstein) that did not match Group A2's **Music & Cultural Data** focus.
+   - Identified missing required deliverables: `hide-dotfiles.ps1` for Windows, unzipped `README.md`, empty `ai-chat-log.md`, and `maze.zip`.
+2. **Thematic Replacement:**
+   - Retained and integrated Min's existing Kanye West lyric file (`violent-crime.txt`).
+   - Planned the replacement of old literary files with hip-hop and music cultural texts: 2Pac's *Changes* (`track_changes.txt`) and Kendrick Lamar's *Alright* (`mystery_track.txt`).
 
 ---
 
-## 3. Architecture & Design Decisions
-1. **Cultural Theme Integration:**
-   - **Entrance:** Uses Kanye West's *Violent Crimes* (`violent-crime.txt`). The clue asks the player to compare occurrences of "daughters" (4) vs. "karma" (1) using `grep` to select `door_1`.
-   - **Studio A (`door_1`):** Features 2Pac's socially conscious masterpiece *Changes* (`track_changes.txt`). Clue requires running `wc -w` (629 words > 500), directing the player to `track_vault_3`.
-   - **Production Studio (`track_vault_3`):** Features Kendrick Lamar's *Alright* (`mystery_track.txt`). Clue teaches Unix hidden file concepts (`ls -a`), leading to the dot-directory `.secret_vault`.
-   - **Backstage Vault (`.secret_vault`):** Features 5 final doors with `message.txt` files. Dead ends contain 0 words or trap messages; `final_door_3` contains the congratulatory victory banner.
-2. **Adherence to Gameplay Rules:**
-   - Empty files (0 bytes / 0 words) like `dead_end.txt`, `door_empty_1`, `empty_studio.txt`, and `silent_room.txt` serve as traps that signal players to turn around (`cd ..`).
-3. **Cross-Platform Compatibility:**
-   - Provided `hide-dotfiles.ps1` with the required PowerShell snippet to hide dotfiles on Windows:
+## 2. Follow-Up Prompt: Puzzle Design & CLI Mechanics
+
+### User Prompt
+> "I want players to navigate only using the terminal. In my README, I specified that players should solve clues using word counts (`wc`) and searching for terms (`grep`), and that 0-word empty files should act as dead ends. How should we arrange the files and clues across the rooms?"
+
+### AI Response & Summary of Action
+1. **Designed a 4-Tier Interactive Puzzle Structure:**
+   - **Entrance (Kanye West - *Violent Crimes*):** Players analyze `violent-crime.txt` with `grep -i -c "daughters" violent-crime.txt` (returns 4) vs. `grep -i -c "karma" violent-crime.txt` (returns 1). Since "daughters" is greater, the clue directs them to `door_1`.
+   - **Studio A / `door_1` (2Pac - *Changes*):** Players run `wc -w track_changes.txt` (629 words). Since it exceeds 500 words, the clue guides them to `track_vault_3`.
+   - **Production Studio / `track_vault_3` (Kendrick Lamar - *Alright*):** Clue introduces hidden Unix files, requiring `ls -a` to reveal the `.secret_vault` directory.
+   - **Backstage Vault / `.secret_vault`:** Houses five doors (`final_door_1` through `final_door_5`).
+2. **Dead-End Architecture:**
+   - Placed 0-word / 0-byte trap files (`dead_end.txt`, `empty_studio.txt`, `door_empty_1`, `silent_room.txt`) in wrong rooms (`door_2`, `track_vault_1`, `track_vault_2`), requiring players to recognize empty files and backtrack using `cd ..`.
+   - Placed the winning victory banner in `final_door_3/message.txt`.
+
+---
+
+## 3. Follow-Up Prompt: Cross-Platform & Windows Compatibility
+
+### User Prompt
+> "The assignment mentions Windows users might have trouble with hidden dot-folders like `.secret_vault` because PowerShell doesn't hide them the same way macOS/Linux does. How do we create the helper script for Windows?"
+
+### AI Response & Summary of Action
+1. **Script Implementation (`hide-dotfiles.ps1`):**
+   - Created the PowerShell script to automatically locate all dotfiles/folders recursively and apply Windows hidden attributes:
      ```powershell
      Get-ChildItem -Recurse -Force | Where-Object { $_.Name.StartsWith('.') } | ForEach-Object { attrib +h $_.FullName }
      ```
+2. **Documentation in README:**
+   - Documented exact instructions for PowerShell users on how to run `.\hide-dotfiles.ps1` and how to bypass execution policy restrictions if needed (`Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass`).
 
 ---
 
-## 4. Verification & Testing Steps
-The following commands were executed to verify the maze's end-to-end functionality:
-1. `grep -i -c "daughters" violent-crime.txt` returned 4; `grep -i -c "karma" violent-crime.txt` returned 1. (Validates path to `door_1`).
-2. `wc -w track_changes.txt` returned 629. (Validates path to `track_vault_3`).
-3. `ls -a` correctly displayed `.secret_vault`.
-4. Verified `final_door_3/message.txt` displayed the victory banner.
-5. Checked directory count (12 directories, exceeding >= 5 requirement) and file count (>15 files, exceeding >= 5 requirement).
-6. Packaged `entrance/` into `maze.zip` and verified that `README.md` remained unzipped in `command-line-maze/`.
+## 4. Follow-Up Prompt: Packaging & Verification
+
+### User Prompt
+> "Can we verify that all puzzle paths work properly from the command line, and package the maze correctly according to the assignment requirements?"
+
+### AI Response & Summary of Action
+1. **Terminal Command Verification:**
+   - Verified `grep -i -c "daughters" violent-crime.txt` = 4 and `grep -i -c "karma" violent-crime.txt` = 1 (routes to `door_1`).
+   - Verified `wc -w track_changes.txt` = 629 (routes to `track_vault_3`).
+   - Verified `ls -a` exposes `.secret_vault`.
+   - Verified `cat final_door_3/message.txt` displays the solved ASCII art banner.
+2. **Archive Packaging:**
+   - Packaged the `entrance/` directory into `maze.zip` using `zip -r maze.zip entrance/`.
+   - Verified that `README.md`, `ai-chat-log.md`, and `hide-dotfiles.ps1` remain outside `maze.zip` for peer access.
+
+---
+
+## 5. Maintenance Prompt: Git Hygiene & .DS_Store Cleanup
+
+### User Prompt
+> ```bash
+> git rm --cached .DS_Store
+> git rm --cached images/.DS_Store
+> echo .DS_Store >> .gitignore
+> git add .gitignore
+> git commit -m "Remove DS_Store files"
+> git push origin main
+> ```
+> *"Did this prompt work?"*
+
+### AI Response & Summary of Action
+1. **Output Analysis:**
+   - Confirmed that Git successfully stopped tracking `.DS_Store` (`rm '.DS_Store'`).
+   - Explained that `fatal: pathspec 'images/.DS_Store' did not match any files` was expected and harmless because `images/.DS_Store` had never been tracked.
+   - Confirmed that `.DS_Store` was appended to `.gitignore` so macOS system files will never be tracked anywhere in the repository.
+   - Confirmed the commit and push (`main -> main`) succeeded on GitHub.
+
+---
+
+## 6. Critical Reflection & AI Evaluation
+- **Strengths of AI Assistance:**
+  - Fast identification of missing edge cases (rubric requirements such as Windows PowerShell compatibility).
+  - Rapid generation of thematic CLI puzzles tied directly to text-analysis commands (`wc`, `grep`).
+  - Clear troubleshooting of Git configuration and repository cleanup.
+- **Human Oversight & Decision-Making:**
+  - Guided the selection of music artists and specific songs relevant to Group A2's cultural data theme.
+  - Ensured clues and maze difficulty felt engaging and educational for classmates rather than overly difficult or trivial.
+  - Verified and tested each command manually in the terminal to confirm player experience matches the documentation.
+

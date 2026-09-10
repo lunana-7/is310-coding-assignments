@@ -1,6 +1,8 @@
 # Min's Cultural Soundstage: A Command Line Maze
 
 **Author:** Min Kim  
+**GitHub:** [@lunana-7](https://github.com/lunana-7)  
+**Hypothesis Username:** [`lunana-7`](https://hypothes.is/users/lunana-7)  
 **Group:** A2 (Music & Cultural Data)  
 **Assignment:** IS 310 - Lost & Found in the Cultural Command Line  
 

@@ -2,7 +2,7 @@
 
 **Student:** Min Kim  
 **GitHub:** [@lunana-7](https://github.com/lunana-7)  
-**Hypothesis Username:** [`lunana-7`](https://hypothes.is/users/lunana-7)  
+**Hypothesis Username:** [`mink4`](https://hypothes.is/users/mink4)  
 
 ## Proof of Installation
 

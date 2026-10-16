@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Movie Culture Notebook</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>Movie Culture Notebook</h1>
+    <p>Collect movies and questions about culture. Add and confirm at least two records, then download your JSON file.</p>
+    <section aria-labelledby="examples-heading">
+      <h2 id="examples-heading">Example records</h2>
+      <p>Examples are not included in your download. Cultural notes are interpretations, not objective labels.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Title</th><th>Director</th><th>Year</th><th>Cultural note</th></tr></thead>
+        <tbody>
+          <tr><td>Spirited Away</td><td>Hayao Miyazaki</td><td>2001</td><td>A possible starting point for discussing work and identity.</td></tr>
+          <tr><td>Parasite</td><td>Bong Joon Ho</td><td>2019</td><td>A possible starting point for discussing class and housing.</td></tr>
+        </tbody>
+      </table></div>
+    </section>
+    <section aria-labelledby="entry-heading">
+      <h2 id="entry-heading">Add a movie</h2>
+      <p>Every field is required. Use a release year from 1888 to the current year.</p>
+      <form id="movie-form">
+        <label for="title">Movie title</label>
+        <input id="title" name="title" required>
+        <label for="director">Director</label>
+        <input id="director" name="director" required>
+        <label for="year">Release year</label>
+        <input id="year" name="year" type="number" min="1888" step="1" required>
+        <label for="cultural_note">Cultural note (a theme or question to explore)</label>
+        <textarea id="cultural_note" name="cultural_note" rows="3" required></textarea>
+        <button type="submit">Review entry</button>
+      </form>
+      <div id="review" hidden>
+        <h3>Review your entry</h3>
+        <dl id="preview"></dl>
+        <button id="confirm" type="button">Confirm and add</button>
+        <button id="edit" type="button">Edit entry</button>
+      </div>
+    </section>
+    <section aria-labelledby="records-heading">
+      <h2 id="records-heading">Your confirmed records</h2>
+      <p id="status" role="status">0 records. Confirm at least two to download.</p>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Title</th><th>Director</th><th>Year</th><th>Cultural note</th></tr></thead>
+        <tbody id="records"></tbody>
+      </table></div>
+      <button id="download" type="button" disabled>Download JSON</button>
+      <p>Records stay in this tab only. Download before closing or refreshing. Your browser chooses the download folder.</p>
+    </section>
+    <noscript>This form requires JavaScript. Enable it or use cli_data_entry.py.</noscript>
+  </main>
+</body>
+</html>

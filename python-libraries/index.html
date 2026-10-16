@@ -3,38 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Movie Culture Notebook</title>
+  <title>Ghibli Field Notes · A little film archive</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
   <main>
-    <h1>Movie Culture Notebook</h1>
-    <p>Collect movies and questions about culture. Add and confirm at least two records, then download your JSON file.</p>
+    <header class="masthead"><a class="brand" href="#">GFN <span>/ FILM ARCHIVE</span></a><span class="edition">VOL. 01 · STUDIO GHIBLI</span></header>
+    <div class="hero">
+      <div class="hero-copy"><p class="eyebrow">A LITTLE ARCHIVE OF BIG WORLDS</p>
+        <h1>Ghibli<br>Field Notes<span class="title-star" aria-hidden="true">✦</span></h1>
+        <p>Between forest spirits and everyday life.<br>Collect the films. Notice the culture. Keep a little wonder.</p>
+        <a class="start-link" href="#entry-heading">START YOUR NOTEBOOK ↓</a>
+      </div>
+      <div class="landscape"><img src="forest.svg" alt="Original pixel illustration of a small train passing through green mountains beneath a golden sun."><span class="scene-caption">NEXT STOP: A WORLD WORTH NOTICING</span></div>
+    </div>
+    <div class="quest-bar"><span><b>YOUR QUEST</b> Collect 2+ Ghibli films</span><span>01 ENTER <i>→</i> 02 REVIEW <i>→</i> 03 KEEP</span></div>
+    <div class="notebook-layout">
     <section aria-labelledby="examples-heading">
-      <h2 id="examples-heading">Example records</h2>
+      <p class="eyebrow">A FEW PLACES TO BEGIN</p><h2 id="examples-heading">From the forest shelf</h2>
       <p>Examples are not included in your download. Cultural notes are interpretations, not objective labels.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Title</th><th>Director</th><th>Year</th><th>Cultural note</th></tr></thead>
         <tbody>
-          <tr><td>Spirited Away</td><td>Hayao Miyazaki</td><td>2001</td><td>A possible starting point for discussing work and identity.</td></tr>
-          <tr><td>Parasite</td><td>Bong Joon Ho</td><td>2019</td><td>A possible starting point for discussing class and housing.</td></tr>
+          <tr><td>Spirited Away</td><td>Hayao Miyazaki</td><td>2001</td><td>How do work, food, and names shape Chihiro’s identity?</td></tr>
+          <tr><td>My Neighbor Totoro</td><td>Hayao Miyazaki</td><td>1988</td><td>How do rural landscapes connect childhood and nature?</td></tr>
         </tbody>
       </table></div>
+      <aside class="field-tip"><span aria-hidden="true">✦</span><h3>Look a little closer</h3><p>A meal, a train ride, an old house. What might an everyday detail reveal about family, work, nature, or belonging?</p><p>There is no single correct reading. Write a question in your own words.</p></aside>
     </section>
     <section aria-labelledby="entry-heading">
-      <h2 id="entry-heading">Add a movie</h2>
-      <p>Every field is required. Use a release year from 1888 to the current year.</p>
+      <p class="eyebrow">01 / MAKE AN OBSERVATION</p><h2 id="entry-heading">A new field note</h2>
+      <p>Choose a Studio Ghibli film and a detail that stayed with you. Every field is required; release years can range from 1888 to the current year.</p>
       <form id="movie-form">
         <label for="title">Movie title</label>
-        <input id="title" name="title" required>
+        <input id="title" name="title" placeholder="e.g. Kiki’s Delivery Service" required>
         <label for="director">Director</label>
-        <input id="director" name="director" required>
+        <input id="director" name="director" placeholder="Who brought this world to life?" required>
         <label for="year">Release year</label>
         <input id="year" name="year" type="number" min="1888" step="1" required>
         <label for="cultural_note">Cultural note (a theme or question to explore)</label>
-        <textarea id="cultural_note" name="cultural_note" rows="3" required></textarea>
-        <button type="submit">Review entry</button>
+        <textarea id="cultural_note" name="cultural_note" rows="4" placeholder="What does this film make you wonder about culture?" required></textarea>
+        <button type="submit">Review field note →</button>
       </form>
       <div id="review" hidden>
         <h3>Review your entry</h3>
@@ -43,16 +53,18 @@
         <button id="edit" type="button">Edit entry</button>
       </div>
     </section>
-    <section aria-labelledby="records-heading">
-      <h2 id="records-heading">Your confirmed records</h2>
+    </div>
+    <section class="collection" aria-labelledby="records-heading">
+      <p class="eyebrow">02 / YOUR GROWING COLLECTION</p><h2 id="records-heading">Postcards from other worlds</h2>
       <p id="status" role="status">0 records. Confirm at least two to download.</p>
       <div class="table-wrap"><table>
         <thead><tr><th>Title</th><th>Director</th><th>Year</th><th>Cultural note</th></tr></thead>
         <tbody id="records"></tbody>
       </table></div>
-      <button id="download" type="button" disabled>Download JSON</button>
+      <button id="download" type="button" disabled>Save your collection ↓ <span class="file-type">JSON</span></button>
       <p>Records stay in this tab only. Download before closing or refreshing. Your browser chooses the download folder.</p>
     </section>
+    <footer><span>GHIBLI FIELD NOTES</span><span>A fan-made culture notebook · IS310 · No affiliation with Studio Ghibli</span></footer>
     <noscript>This form requires JavaScript. Enable it or use cli_data_entry.py.</noscript>
   </main>
 </body>

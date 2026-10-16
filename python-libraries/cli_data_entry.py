@@ -11,9 +11,9 @@ from rich.table import Table
 console = Console()
 EXAMPLES = [
     {"title": "Spirited Away", "director": "Hayao Miyazaki", "year": 2001,
-     "cultural_note": "A possible starting point for discussing work and identity."},
-    {"title": "Parasite", "director": "Bong Joon Ho", "year": 2019,
-     "cultural_note": "A possible starting point for discussing class and housing."},
+     "cultural_note": "How do work, food, and names shape Chihiro’s identity?"},
+    {"title": "My Neighbor Totoro", "director": "Hayao Miyazaki", "year": 1988,
+     "cultural_note": "How do rural landscapes connect childhood and nature?"},
 ]
 
 
@@ -55,7 +55,8 @@ def ask_yes_no(prompt):
 
 
 def main():
-    console.print("Movie Culture Notebook", style="bold cyan")
+    console.print("[ Ghibli Field Notes ]", style="bold green")
+    console.print("A little archive of big worlds. Collect Studio Ghibli films and cultural questions.")
     console.print("Examples only; these will not be included in your file.")
     show_records(EXAMPLES, "Example movie records")
     console.print("Add at least two movies. Cultural notes are your interpretations, not objective labels.")

@@ -1,6 +1,6 @@
-# Movie Culture Notebook — AI-Assisted Pathway 2
+# Ghibli Field Notes — AI-Assisted Pathway 2
 
-This assignment collects movie titles, directors, release years, and short cultural notes through a Python CLI and an HTML form. The topic builds on the movies in my earlier Python foundations assignment. A cultural note is a curator's interpretation or research question, not an objective classification of a movie.
+This assignment collects Studio Ghibli movie titles, directors, release years, and short cultural notes through a Python CLI and an HTML form. The topic focuses on how Ghibli films invite questions about nature, childhood, work, family, and belonging. The examples are Spirited Away and My Neighbor Totoro. A cultural note is a curator's interpretation or research question, not an objective classification of a movie.
 
 Both interfaces show two examples, collect at least two new records, require all four fields, and ask for review and confirmation. Examples are not automatically included in the output. Both export a JSON list of dictionaries with `title`, `director`, `year` (an integer), and `cultural_note`. Release years must be whole numbers from 1888 through the current year. This range is a practical input constraint; it does not establish a universal beginning of cinema.
 
@@ -39,7 +39,7 @@ The fields and output schema are identical. The CLI validates through loops and 
 
 Codex generated the two interfaces, styling, setup instructions, sample entries, and documentation, and ran checks. During testing, Codex fixed Rich's wrapping of long output paths. The solution uses simple local JSON files rather than a server, and preserves previous CLI output with numbered filenames. These are AI implementation choices; no independent student revisions or rejected AI suggestions are claimed. The student should review the code and add any later personal changes to the AI log.
 
-For a peer collecting a small movie dataset, the HTML interface is the better fit because they can see the fields, edit their notes, and compare records before downloading. The CLI is useful for someone already working in a terminal. Both leave cultural interpretation to the person entering the note, and neither verifies movie facts or the interpretation itself.
+For a peer collecting a small Studio Ghibli movie dataset, the HTML interface is the better fit because they can see the fields, edit their notes, and compare records before downloading. The CLI is useful for someone already working in a terminal. Both leave cultural interpretation to the person entering the note, and neither verifies movie facts or the interpretation itself.
 
 ## Verification
 
@@ -51,7 +51,7 @@ For a peer collecting a small movie dataset, the HTML interface is the better fi
 
 ## Submission and peer testing
 
-The submission folder should contain this README, `cli_data_entry.py`, `requirements.txt`, `movies_001.json`, `ai-chat-log.md`, `index.html`, `style.css`, and `script.js`.
+The submission folder should contain this README, `cli_data_entry.py`, `requirements.txt`, `movies_001.json`, `ai-chat-log.md`, `index.html`, `style.css`, `script.js`, and `forest.svg`.
 
 After pushing, post this assignment folder's GitHub link in the course's appropriate Fall 2026 Discussions thread. Posting and peer testing are not completed by these files.
 
@@ -61,3 +61,9 @@ For peer testing, choose a classmate's CLI or HTML interface, enter at least two
 - Output: [attach the actual file or paste the actual output]
 - Worked well: [specific observation from the test]
 - Could be clearer: [specific suggestion from the test]
+
+## Ghibli pixel-art revision
+
+At the student's request, the project became **Ghibli Field Notes**. The HTML now uses a pixel forest/train illustration, square borders, offset shadows, a paper-and-moss palette, a quest strip, and a responsive field-notebook layout. `forest.svg` is an original, locally stored illustration made from geometric shapes; there are no external image or font dependencies. It is a fan-made course project, not affiliated with Studio Ghibli.
+
+Both interfaces keep the same four fields and JSON schema. The cultural-note prompt invites personal observations rather than assigning fixed meanings to films. The form suggests Ghibli titles but accepts free text, so the curator is responsible for checking whether a movie belongs in the collection. The CLI and sample data use the same Ghibli focus.

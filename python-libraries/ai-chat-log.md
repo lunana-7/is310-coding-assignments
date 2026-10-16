@@ -33,3 +33,11 @@ A GitHub authentication check initially failed under restricted network access. 
 ## Student changes and remaining responsibilities
 
 No student-authored revisions or rejected AI suggestions occurred during this exchange. The student should read and understand the code, manually try the HTML workflow, and record any later corrections here. Posting to the course Discussion and testing a classmate's interface require actual follow-up; no peer-test results have been invented.
+
+## Follow-up: Ghibli and pixel style
+
+User prompt (verbatim):
+
+> i ewant you to make it a bit more creative and use the gibil movie culture one and also make it pixel like
+
+Codex interpreted “gibil” as Studio Ghibli and revised the project into **Ghibli Field Notes**. It created a local geometric pixel landscape SVG, redesigned the HTML with a forest palette, blocky type and buttons, and field-notebook language, and replaced the non-Ghibli example with My Neighbor Totoro. The CLI, generated sample JSON, and README were updated to match. The four-field schema and entry/review/confirmation/export flow were preserved. This revision reflects the student's requested topic and visual direction; implementation was AI-generated. JavaScript checks and a two-record CLI run were repeated. Browser visual verification remains uncompleted because the browser tool previously blocked local-file access.

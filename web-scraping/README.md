@@ -64,7 +64,7 @@ On Windows PowerShell, activate with `.\.venv\Scripts\Activate.ps1`; use `python
 | `request_log.csv` | Each run request's timestamp, URL, status, and error |
 | `run_metadata.json` | Run times, identity, source/policy URLs, delay, and record totals |
 | `test_wiki_scraping.py` | Offline regression checks |
-| `ai-chat-log.md` | AI use and troubleshooting record |
+| `AI-USE.md` | Brief AI-use disclosure |
 
 | CSV field | Meaning |
 | --- | --- |
@@ -131,4 +131,4 @@ PY
 
 ## AI assistance
 
-Codex helped choose and inspect the source, implement and test the scraper, run the actual collection, calculate summaries, and write the documentation. See `ai-chat-log.md`. The data comes from real HTTP requests, not AI-generated measurements. The interpretive question and reflection are AI-assisted drafts that I remain responsible for understanding.
+Codex helped choose and inspect the source, implement and test the scraper, run the actual collection, calculate summaries, and write the documentation. See `AI-USE.md`. The data comes from real HTTP requests, not AI-generated measurements. The interpretive question and reflection are AI-assisted drafts that I remain responsible for understanding.

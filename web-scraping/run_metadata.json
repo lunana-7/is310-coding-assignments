@@ -1,0 +1,15 @@
+{
+  "started_at_utc": "2026-10-28T23:36:01+00:00",
+  "finished_at_utc": "2026-10-28T23:36:58+00:00",
+  "user_agent": "is310-course-scraper/1.0 (Min Kim; https://github.com/lunana-7/is310-coding-assignments; educational homework)",
+  "delay_seconds": 2,
+  "index_url": "https://nausicaa.net/wiki/Main_Page",
+  "robots_url": "https://nausicaa.net/robots.txt",
+  "policy_urls": [
+    "https://nausicaa.net/wiki/GhibliWiki:About",
+    "https://nausicaa.net/wiki/GhibliWiki:General_disclaimer",
+    "https://nausicaa.net/wiki/GhibliWiki:Privacy_policy"
+  ],
+  "records": 21,
+  "successful_measurements": 21
+}
